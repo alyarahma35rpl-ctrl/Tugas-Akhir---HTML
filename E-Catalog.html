@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="AirFruit - E-Catalog Buah Segar Lokal, Impor & Organik di Malang. Lokasi Depan SMK Telkom Malang.">
+    <title>AirFruit - E-Catalog Buah Segar Malang</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style-E.css">
+</head>
+
+<body>
+    <aside class="sidebar">
+        <a href="#home" class="logo">
+            <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M50,15 C52,8 57,5 60,3 C58,10 54,16 51,22 Z" fill="#2d6a4f" />
+                <path d="M50,22 C40,12 28,15 22,20 C32,24 42,24 49,24 Z" fill="#40916c" />
+                <path d="M50,22 C60,12 72,15 78,20 C68,24 58,24 51,24 Z" fill="#52b788" />
+                <path d="M50,25 C32,25 20,40 20,62 C20,80 34,90 50,90 C66,90 80,80 80,62 C80,40 68,25 50,25 Z" fill="#3a86ff" />
+                <path d="M50,30 C37,30 27,42 27,60 C27,74 37,83 50,83 C63,83 73,74 73,60 C73,42 63,30 50,30 Z" fill="#48cae4" />
+                <ellipse cx="38" cy="45" rx="4" ry="10" fill="#ffffff" transform="rotate(-20 38 45)" opacity="0.6"/>
+                <circle cx="62" cy="70" r="3" fill="#ffffff" opacity="0.6"/>
+            </svg>
+            <span class="logo-text">Air<span>Fruit</span></span>
+        </a>
+        
+        <nav class="nav-links">
+            <a href="#home" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a>
+            <a href="#keunggulan" class="nav-link"><i class="fa-solid fa-star"></i> Keunggulan</a>
+            <a href="#promo" class="nav-link"><i class="fa-solid fa-tags"></i> Promo Paket</a>
+            <a href="#kategori" class="nav-link"><i class="fa-solid fa-layer-group"></i> Kategori</a>
+            
+            <div class="dropdown">
+                <a href="#katalog" class="nav-link"><i class="fa-solid fa-apple-whole"></i> Macam Buah <i class="fa-solid fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="#katalog" data-filter="filter-lokal">- Buah Lokal</a>
+                    <a href="#katalog" data-filter="filter-impor">- Buah Impor</a>
+                    <a href="#katalog" data-filter="filter-organik">- Buah Organik</a>
+                </div>
+            </div>
+
+            <a href="#katalog" class="nav-link"><i class="fa-solid fa-store"></i> Katalog</a>
+            <a href="#rating" class="nav-link"><i class="fa-solid fa-comment-dots"></i> Ulasan</a>
+            <a href="#pemesanan" class="nav-link"><i class="fa-solid fa-cart-shopping"></i> Pemesanan</a>
+            <a href="#lokasi" class="nav-link"><i class="fa-solid fa-location-dot"></i> Lokasi Toko</a>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <header class="top-navbar">
+            <div class="search-wrapper">
+                <form id="searchForm" class="search-box">
+                    <input type="text" id="searchInput" placeholder="Cari nama buah spesifik (contoh: Apel, Shine Muscat, Kiwi)..." autocomplete="off">
+                    <button type="submit">Cari</button>
+                </form>
+
+                <div id="searchResultsDropdown" class="search-results-dropdown"></div>
+            </div>
+        </header>
+
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <span class="badge-hero"><i class="fa-solid fa-check-circle"></i> 100% Segar & Garansi Nutrisi</span>
+
+                <h1>Kesegaran Strawberry & Kemurnian Buah Alami</h1>
+                <p>E-Catalog resmi AirFruit. Pilih buah lokal pilihan dan impor segar yang siap diantar langsung ke rumah Anda atau diambil di toko kami tepat di depan SMK Telkom Malang.</p>
+
+                <div class="hero-buttons">
+                    <a href="#katalog" class="btn-primary">Jelajahi Katalog <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="#pemesanan" class="btn-secondary-hero">Pesan Sekarang</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <h3>12+</h3>
+                        <p>Varian Buah</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Garansi Segar</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>&lt; 1 Jam</h3>
+                        <p>Kirim Instan</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="keunggulan" class="features-section">
+            <div class="section-header">
+                <h2>Mengapa Memilih AirFruit?</h2>
+                <p>Standar kualitas terbaik untuk memenuhi kebutuhan gizi harian Anda.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Pengiriman Cepat</h3>
+                    <p>Kurir instan siap mengantar buah segar langsung ke lokasi Anda di Malang Raya.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-heart"></i></div>
+                    <h3>Garansi Kesegaran</h3>
+                    <p>Jaminan ganti baru jika buah yang Anda terima rusak atau tidak layak konsumsi.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+                    <h3>Harga Kompetitif</h3>
+                    <p>Harga terjangkau langsung dari petani lokal & distributor resmi tanpa perantara.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>Pembersihan Higienis</h3>
+                    <p>Seluruh buah disaring dan dibersihkan dengan teknologi ozon & air murni.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="promo" class="promo-section">
+            <div class="section-header">
+                <h2>Paket Hemat & Promo Spesial</h2>
+                <p>Lebih hemat beli paket buah untuk keluarga maupun anak kos di sekitar Sawojajar!</p>
+            </div>
+            <div class="promo-grid">
+                <div class="promo-card">
+                    <span class="promo-tag">Diskon 15%</span>
+                    <i class="fa-solid fa-basket-shopping promo-icon"></i>
+                    <h3>Paket Sehat Anak Kos</h3>
+                    <p>1 Pack Strawberry Sweet + 1 Kg Pisang Cavendish + 1 Kg Apel Manalagi.</p>
+                    <div class="promo-price">
+                        <span class="old-price">Rp 80.000</span>
+                        <span class="new-price">Rp 68.000</span>
+                    </div>
+                    <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Paket Sehat Anak Kos"><i class="fa-solid fa-cart-plus"></i> Ambil Paket</a>
+                </div>
+
+                <div class="promo-card">
+                    <span class="promo-tag">Best Seller</span>
+                    <i class="fa-solid fa-gift promo-icon"></i>
+                    <h3>Parcel Buah Segar</h3>
+                    <p>Anggur Shine Muscat + Kiwi Gold Zespri + Jeruk Sunkist Navel + Kartu Ucapan.</p>
+                    <div class="promo-price">
+                        <span class="old-price">Rp 190.000</span>
+                        <span class="new-price">Rp 165.000</span>
+                    </div>
+                    <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Parcel Buah Segar"><i class="fa-solid fa-cart-plus"></i> Ambil Paket</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="kategori" class="categories">
+            <div class="section-header">
+                <h2>Kategori Asal Buah</h2>
+                <p>Pilih kategori sesuai dengan selera dan kebutuhan Anda.</p>
+            </div>
+            <div class="category-grid">
+                <a href="#katalog" class="category-card" data-filter="filter-lokal">
+                    <i class="fa-solid fa-tree"></i>
+                    <h3>Buah Lokal</h3>
+                    <p>Dipetik langsung dari perkebunan nusantara pilihan.</p>
+                </a>
+                <a href="#katalog" class="category-card" data-filter="filter-impor">
+                    <i class="fa-solid fa-plane"></i>
+                    <h3>Buah Impor</h3>
+                    <p>Kualitas premium didatangkan langsung dari luar negeri.</p>
+                </a>
+                <a href="#katalog" class="category-card" data-filter="filter-organik">
+                    <i class="fa-solid fa-seedling"></i>
+                    <h3>Buah Organik</h3>
+                    <p>Bebas bahan kimia & pestisida, aman untuk keluarga.</p>
+                </a>
+            </div>
+        </section>
+
+        <section id="katalog" class="products">
+            <div class="section-header">
+                <h2>Katalog Buah Segar</h2>
+                <p>Pilih kategori di bawah ini untuk menyaring jenis buah yang tersedia.</p>
+            </div>
+
+            <input type="radio" name="filter-buah" id="filter-all" class="filter-radio" checked>
+            <input type="radio" name="filter-buah" id="filter-lokal" class="filter-radio">
+            <input type="radio" name="filter-buah" id="filter-impor" class="filter-radio">
+            <input type="radio" name="filter-buah" id="filter-organik" class="filter-radio">
+
+            <div class="filter-tabs">
+                <label for="filter-all" class="tab-btn active">Semua Buah</label>
+                <label for="filter-lokal" class="tab-btn">Lokal</label>
+                <label for="filter-impor" class="tab-btn">Impor</label>
+                <label for="filter-organik" class="tab-btn">Organik</label>
+            </div>
+
+            <div class="product-grid">
+                <div class="product-card lokal">
+                    <div class="card-header-info">
+                        <h3>Strawberry Sweet Petal</h3>
+                        <span class="badge lokal">Buah Lokal</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1464965911861-746a04b4bca6?auto=format&fit=crop&w=500&q=80" alt="Strawberry Sweet Petal" loading="lazy">
+                    <p class="fruit-desc">Rasa manis segar khas pegunungan dengan perpaduan sedikit asam alami yang membangkitkan selera.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 35.000 <span class="unit">/ pack</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Strawberry Sweet Petal"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card lokal">
+                    <div class="card-header-info">
+                        <h3>Apel Manalagi Malang</h3>
+                        <span class="badge lokal">Buah Lokal</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=500&q=80" alt="Apel Manalagi Malang" loading="lazy">
+                    <p class="fruit-desc">Tekstur sangat renyah dan garing dengan dominasi rasa manis harum manis yang khas.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 25.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Apel Manalagi Malang"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card impor">
+                    <div class="card-header-info">
+                        <h3>Jeruk Sunkist Navel</h3>
+                        <span class="badge impor">Buah Impor</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1582979512210-99b6a53386f9?auto=format&fit=crop&w=500&q=80" alt="Jeruk Sunkist Navel" loading="lazy">
+                    <p class="fruit-desc">Kaya akan bulir air melimpah, rasanya manis segar beraroma sitrus yang kuat tanpa rasa pahit.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 45.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Jeruk Sunkist Navel"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card lokal">
+                    <div class="card-header-info">
+                        <h3>Pisang Cavendish</h3>
+                        <span class="badge lokal">Buah Lokal</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=500&q=80" alt="Pisang Cavendish" loading="lazy">
+                    <p class="fruit-desc">Daging buah sangat lembut, manis legit pas, cocok untuk sarapan sehat dan nutrisi harian.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 20.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Pisang Cavendish"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card impor">
+                    <div class="card-header-info">
+                        <h3>Anggur Shine Muscat</h3>
+                        <span class="badge impor">Buah Impor</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1537640538966-79f369143f8f?auto=format&fit=crop&w=500&q=80" alt="Anggur Shine Muscat" loading="lazy">
+                    <p class="fruit-desc">Sangat renyah meluncur di mulut, kaya rasa manis karamel-muscat alami tanpa rasa sepat.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 85.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Anggur Shine Muscat"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+
+                <div class="product-card organik">
+                    <div class="card-header-info">
+                        <h3>Mangga Harum Manis</h3>
+                        <span class="badge organik">Buah Organik</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1553279768-865429fa0078?auto=format&fit=crop&w=500&q=80" alt="Mangga Harum Manis" loading="lazy">
+                    <p class="fruit-desc">Aroma harum semerbak dengan daging serat halus dan cita rasa manis legit bagai madu.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 30.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Mangga Harum Manis"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card impor">
+                    <div class="card-header-info">
+                        <h3>Kiwi Gold Zespri</h3>
+                        <span class="badge impor">Buah Impor</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1585059895524-72359e06133a?auto=format&fit=crop&w=500&q=80" alt="Kiwi Gold Zespri" loading="lazy">
+                    <p class="fruit-desc">Daging emas nan lembut, sensasi rasa manis madu tropis dengan kadar Vitamin C sangat tinggi.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 60.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Kiwi Gold Zespri"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card lokal">
+                    <div class="card-header-info">
+                        <h3>Nanas Honi Sunpride</h3>
+                        <span class="badge lokal">Buah Lokal</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?auto=format&fit=crop&w=500&q=80" alt="Nanas Honi Sunpride" loading="lazy">
+                    <p class="fruit-desc">Sangat manis tanpa rasa gatal di lidah, kadar air tinggi dan aromanya menyegarkan.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 22.000 <span class="unit">/ buah</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Nanas Honi Sunpride"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card lokal">
+                    <div class="card-header-info">
+                        <h3>Semangka Merah Non-Biji</h3>
+                        <span class="badge lokal">Buah Lokal</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=500&q=80" alt="Semangka Merah Non Biji" loading="lazy">
+                    <p class="fruit-desc">Sangat melimpah airnya, renyah manis dan praktis dikonsumsi tanpa terganggu biji.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 12.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Semangka Merah Non-Biji"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card organik">
+                    <div class="card-header-info">
+                        <h3>Alpukat Mentega Super</h3>
+                        <span class="badge organik">Buah Organik</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1523049673857-eb18f1d7b578?auto=format&fit=crop&w=500&q=80" alt="Alpukat Mentega Super" loading="lazy">
+                    <p class="fruit-desc">Tekstur kental lengket lembut bak mentega dengan gurih alami tanpa rasa pahit.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 40.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Alpukat Mentega Super"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card impor">
+                    <div class="card-header-info">
+                        <h3>Blueberry Fresh Impor</h3>
+                        <span class="badge impor">Buah Impor</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1498557850523-fd3d118b962e?auto=format&fit=crop&w=500&q=80" alt="Blueberry Fresh Impor" loading="lazy">
+                    <p class="fruit-desc">Sensasi meletup garing saat dikunyah, perpaduan manis gurih penuh kaya antioksidan.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 50.000 <span class="unit">/ pack</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Blueberry Fresh Impor"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+                
+                <div class="product-card lokal">
+                    <div class="card-header-info">
+                        <h3>Buah Naga Merah</h3>
+                        <span class="badge lokal">Buah Lokal</span>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1527325678964-54921661f888?auto=format&fit=crop&w=500&q=80" alt="Buah Naga Merah Segar" loading="lazy">
+                    <p class="fruit-desc">Warna merah pekat yang kaya nutrisi, rasa manis lembut yang menyegarkan dahaga.</p>
+                    <div class="card-footer">
+                        <p class="price">Rp 18.000 <span class="unit">/ kg</span></p>
+                        <a href="#pemesanan" class="btn-secondary btn-order-quick" data-produk="Buah Naga Merah"><i class="fa-solid fa-cart-plus"></i> Pesan</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rating" class="rating-section">
+            <div class="section-header">
+                <h2>Ulasan Pelanggan</h2>
+                <p>Pengalaman nyata dari pembeli setia AirFruit Store Malang.</p>
+            </div>
+            
+            <div class="slider-wrapper">
+                <div class="rating-bubble active">
+                    <div class="fruit-badge-icon strawberry">
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Strawberry-nya manis & tidak ada yang busuk. Sangat praktis karena lokasinya pas banget di depan SMK Telkom Malang."</p>
+                    <div class="user-info">
+                        <strong>Pembeli 1</strong>
+                        <span>Pesanan: Strawberry Sweet Petal</span>
+                    </div>
+                </div>
+
+                <div class="rating-bubble">
+                    <div class="fruit-badge-icon apple">
+                        <i class="fa-solid fa-apple-whole"></i>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Apel Malang asli renyah banget. Pengiriman cepat lewat kurir instan, 30 menit sampai di rumah."</p>
+                    <div class="user-info">
+                        <strong>Pembeli 2</strong>
+                        <span>Pesanan: Apel Manalagi Malang</span>
+                    </div>
+                </div>
+
+                <div class="rating-bubble">
+                    <div class="fruit-badge-icon grape">
+                        <i class="fa-solid fa-lemon"></i>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="comment">"Shine Muscat-nya manis luar biasa dan ukurannya besar-besar. Worth it banget untuk harga segini!"</p>
+                    <div class="user-info">
+                        <strong>Pembeli 3</strong>
+                        <span>Pesanan: Anggur Shine Muscat</span>
+                    </div>
+                </div>
+
+                <div class="slider-controls">
+                    <button type="button" id="prevSlide"><i class="fa-solid fa-chevron-left"></i> Sebelumnya</button>
+                    <button type="button" id="nextSlide">Berikutnya <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <section id="pemesanan" class="order-section">
+            <div class="order-container">
+                <h2>Formulir Pemesanan Buah</h2>
+                <p class="order-subtitle">Isi data di bawah untuk melakukan pemesanan secara langsung melalui website.</p>
+                
+                <form id="orderForm" class="order-form">
+                    <div class="form-group">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="telepon">Nomor Telepon / WhatsApp</label>
+                        <input type="tel" id="telepon" name="telepon" placeholder="08xxxxxxxxxx" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="buah">Pilih Buah / Paket</label>
+                        <select id="buah" name="buah" required>
+                            <option value="">-- Pilih Jenis Buah --</option>
+                            <option value="Paket Sehat Anak Kos">Paket Sehat Anak Kos (Promo)</option>
+                            <option value="Parcel Buah Segar">Parcel Buah Segar (Promo)</option>
+                            <option value="Strawberry Sweet Petal">Strawberry Sweet Petal (Lokal)</option>
+                            <option value="Apel Manalagi Malang">Apel Manalagi Malang (Lokal)</option>
+                            <option value="Jeruk Sunkist Navel">Jeruk Sunkist Navel (Impor)</option>
+                            <option value="Pisang Cavendish">Pisang Cavendish (Lokal)</option>
+                            <option value="Anggur Shine Muscat">Anggur Shine Muscat (Impor)</option>
+                            <option value="Mangga Harum Manis">Mangga Harum Manis (Organik)</option>
+                            <option value="Kiwi Gold Zespri">Kiwi Gold Zespri (Impor)</option>
+                            <option value="Nanas Honi Sunpride">Nanas Honi Sunpride (Lokal)</option>
+                            <option value="Semangka Merah Non-Biji">Semangka Merah Non-Biji (Lokal)</option>
+                            <option value="Alpukat Mentega Super">Alpukat Mentega Super (Organik)</option>
+                            <option value="Blueberry Fresh Impor">Blueberry Fresh Impor (Impor)</option>
+                            <option value="Buah Naga Merah">Buah Naga Merah (Lokal)</option>
+                        </select>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jumlah">Jumlah (Kg / Pack)</label>
+                            <input type="number" id="jumlah" name="jumlah" min="1" value="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="metode">Metode Pengiriman</label>
+                            <select id="metode" name="metode" required>
+                                <option value="Kurir Instan (Delivery)">Kurir Instan (Delivery)</option>
+                                <option value="Ambil Sendiri di Toko">Ambil Sendiri di Toko</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat Pengiriman / Catatan</label>
+                        <textarea id="alamat" name="text" rows="3" placeholder="Masukkan alamat lengkap atau catatan khusus..." required></textarea>
+                    </div>
+
+                    <div class="payment-options">
+                        <label>Pilih Metode Pembayaran:</label>
+                        <div class="payment-icons">
+                            <label class="pay-option">
+                                <input type="radio" name="pembayaran" value="QRIS" required>
+                                <span class="pay-badge"><i class="fa-solid fa-qrcode"></i> QRIS</span>
+                            </label>
+                            <label class="pay-option">
+                                <input type="radio" name="pembayaran" value="Transfer Bank">
+                                <span class="pay-badge"><i class="fa-solid fa-building-columns"></i> Transfer Bank</span>
+                            </label>
+                            <label class="pay-option">
+                                <input type="radio" name="pembayaran" value="COD (Bayar di Tempat)">
+                                <span class="pay-badge"><i class="fa-solid fa-money-bill-wave"></i> COD</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit"><i class="fa-solid fa-bag-shopping"></i> Pesan Sekarang</button>
+                </form>
+
+                <div id="orderSuccessBox" class="order-success-box" style="display: none;">
+                    <div class="success-icon-circle">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h3>Pesanan Berhasil Dibuat!</h3>
+                    <p class="success-sub">Terima kasih telah berbelanja di <strong>AirFruit Malang</strong>. Pesanan Anda sedang kami siapkan.</p>
+                    
+                    <div id="orderSummaryDetail" class="order-summary-card"></div>
+
+                    <button type="button" id="btnNewOrder" class="btn-new-order">
+                        <i class="fa-solid fa-rotate-left"></i> Buat Pesanan Baru
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="lokasi" class="location-section">
+            <div class="section-header">
+                <h2>Kunjungi Toko Fisik Kami</h2>
+                <p>Datang langsung ke toko kami untuk memilih buah secara mandiri.</p>
+            </div>
+            <div class="location-container">
+                <div class="location-info">
+                    <div class="info-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <div>
+                            <h3>Alamat Utama</h3>
+                            <p>Jl. Danau Ranau (Tepat di Depan SMK Telkom Malang), Sawojajar, Kec. Kedungkandang, Kota Malang, Jawa Timur 65139</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-clock"></i>
+                        <div>
+                            <h3>Jam Operasional</h3>
+                            <p>Senin - Minggu: 07.00 - 21.00 WIB</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <div>
+                            <h3>Kontak & Layanan</h3>
+                            <p>WhatsApp: +62 812-3456-7890<br>Email: info@airfruit.id</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-wrapper">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.213824524177!2d112.656000!3d-7.976000!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwNTgnMzMuNiJTIDExMsKwMzknMjEuNiJF!5e0!3m2!1sid!2sid!4v1620000000000!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo">
+                        <svg class="logo-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50,15 C52,8 57,5 60,3 C58,10 54,16 51,22 Z" fill="#2d6a4f" />
+                            <path d="M50,22 C40,12 28,15 22,20 C32,24 42,24 49,24 Z" fill="#40916c" />
+                            <path d="M50,22 C60,12 72,15 78,20 C68,24 58,24 51,24 Z" fill="#52b788" />
+                            <path d="M50,25 C32,25 20,40 20,62 C20,80 34,90 50,90 C66,90 80,80 80,62 C80,40 68,25 50,25 Z" fill="#3a86ff" />
+                            <path d="M50,30 C37,30 27,42 27,60 C27,74 37,83 50,83 C63,83 73,74 73,60 C73,42 63,30 50,30 Z" fill="#48cae4" />
+                        </svg>
+                        <span class="logo-text">Air<span>Fruit</span></span>
+                    </div>
+                    <p>Katalog resmi penyedia buah lokal, impor, dan organik berkualitas tinggi di Malang.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi Cepat</h4>
+                    <a href="#home">Home</a>
+                    <a href="#keunggulan">Keunggulan</a>
+                    <a href="#promo">Promo Paket</a>
+                    <a href="#katalog">Katalog Produk</a>
+                    <a href="#lokasi">Lokasi Toko</a>
+                </div>
+                <div class="footer-social">
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AirFruit Store - Depan SMK Telkom Malang. All Rights Reserved.</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            const searchForm = document.getElementById("searchForm");
+            const searchInput = document.getElementById("searchInput");
+            const resultsDropdown = document.getElementById("searchResultsDropdown");
+            const productCards = document.querySelectorAll(".product-card");
+            const selectBuah = document.getElementById("buah");
+
+            const daftarBuah = Array.from(productCards).map(card => ({
+                nama: card.querySelector("h3").textContent.trim(),
+                kategori: card.querySelector(".badge").textContent.trim(),
+                harga: card.querySelector(".price").textContent.trim(),
+                gambar: card.querySelector("img").src
+            }));
+
+            function tampilkanHasilPencarian() {
+                const kataKunci = searchInput.value.toLowerCase().trim();
+
+                if (kataKunci === "") {
+                    resultsDropdown.style.display = "none";
+                    resultsDropdown.innerHTML = "";
+                    return;
+                }
+
+                const hasilCocok = daftarBuah.filter(item =>
+                    item.nama.toLowerCase().includes(kataKunci)
+                );
+
+                resultsDropdown.style.display = "block";
+
+                if (hasilCocok.length === 0) {
+                    resultsDropdown.innerHTML = `
+                        <div class="search-not-found">
+                            <i class="fa-solid fa-circle-exclamation"></i>
+                            <span>Buah tidak ada di daftar.</span>
+                        </div>
+                    `;
+                } else {
+                    resultsDropdown.innerHTML = hasilCocok.map(item => `
+                        <div class="search-result-item">
+                            <img src="${item.gambar}" alt="${item.nama}">
+                            <div class="search-item-info">
+                                <strong>${item.nama}</strong>
+                                <small>${item.kategori} • ${item.harga}</small>
+                            </div>
+                            <a href="#pemesanan" class="btn-pilih-hasil" data-produk="${item.nama}">Pesan</a>
+                        </div>
+                    `).join("");
+
+                    resultsDropdown.querySelectorAll(".btn-pilih-hasil").forEach(btn => {
+                        btn.addEventListener("click", function () {
+                            const produkDipilih = this.getAttribute("data-produk");
+                            if (selectBuah) selectBuah.value = produkDipilih;
+                            resultsDropdown.style.display = "none";
+                        });
+                    });
+                }
+            }
+
+            searchInput.addEventListener("input", tampilkanHasilPencarian);
+            searchForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+                tampilkanHasilPencarian();
+            });
+
+            document.addEventListener("click", function (e) {
+                if (!e.target.closest(".search-wrapper")) {
+                    resultsDropdown.style.display = "none";
+                }
+            });
+
+            const filterRadios = document.querySelectorAll(".filter-radio");
+            const tabButtons = document.querySelectorAll(".tab-btn");
+
+            function updateActiveTab(radioId) {
+                tabButtons.forEach(btn => {
+                    btn.classList.toggle("active", btn.getAttribute("for") === radioId);
+                });
+            }
+
+            filterRadios.forEach(radio => {
+                radio.addEventListener("change", function () {
+                    updateActiveTab(this.id);
+                    const kategori = this.id.replace("filter-", "");
+
+                    productCards.forEach(card => {
+                        if (kategori === "all" || card.classList.contains(kategori)) {
+                            card.style.display = "flex";
+                        } else {
+                            card.style.display = "none";
+                        }
+                    });
+                });
+            });
+
+            document.querySelectorAll("[data-filter]").forEach(el => {
+                el.addEventListener("click", function () {
+                    const targetRadio = document.getElementById(this.getAttribute("data-filter"));
+                    if (targetRadio) {
+                        targetRadio.checked = true;
+                        targetRadio.dispatchEvent(new Event("change"));
+                    }
+                });
+            });
+
+            document.querySelectorAll(".btn-order-quick").forEach(btn => {
+                btn.addEventListener("click", function () {
+                    const produk = this.getAttribute("data-produk");
+                    if (produk && selectBuah) {
+                        selectBuah.value = produk;
+                    }
+                });
+            });
+
+            const bubbles = document.querySelectorAll(".rating-bubble");
+            const prevBtn = document.getElementById("prevSlide");
+            const nextBtn = document.getElementById("nextSlide");
+            let currentSlide = 0;
+
+            function showSlide(index) {
+                bubbles.forEach((b, i) => b.classList.toggle("active", i === index));
+            }
+
+            prevBtn.addEventListener("click", () => {
+                currentSlide = (currentSlide - 1 + bubbles.length) % bubbles.length;
+                showSlide(currentSlide);
+            });
+
+            nextBtn.addEventListener("click", () => {
+                currentSlide = (currentSlide + 1) % bubbles.length;
+                showSlide(currentSlide);
+            });
+
+            const orderForm = document.getElementById("orderForm");
+            const orderSuccessBox = document.getElementById("orderSuccessBox");
+            const orderSummaryDetail = document.getElementById("orderSummaryDetail");
+            const btnNewOrder = document.getElementById("btnNewOrder");
+
+            orderForm.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const nama = document.getElementById("nama").value;
+                const telepon = document.getElementById("telepon").value;
+                const buah = selectBuah.value;
+                const jumlah = document.getElementById("jumlah").value;
+                const metode = document.getElementById("metode").value;
+                const alamat = document.getElementById("alamat").value;
+                const pembayaranTerpilih = document.querySelector('input[name="pembayaran"]:checked');
+                const metodeBayar = pembayaranTerpilih ? pembayaranTerpilih.value : "-";
+
+                const kodePesanan = "AF-" + Math.floor(100000 + Math.random() * 900000);
+
+                orderSummaryDetail.innerHTML = `
+                    <div class="summary-row"><span>No. Pesanan:</span> <strong>#${kodePesanan}</strong></div>
+                    <div class="summary-row"><span>Nama Pemesan:</span> <strong>${nama}</strong></div>
+                    <div class="summary-row"><span>No. Telepon:</span> <strong>${telepon}</strong></div>
+                    <div class="summary-row"><span>Produk:</span> <strong>${buah} (${jumlah} Kg/Pack)</strong></div>
+                    <div class="summary-row"><span>Pengiriman:</span> <strong>${metode}</strong></div>
+                    <div class="summary-row"><span>Pembayaran:</span> <span class="badge-pay-selected">${metodeBayar}</span></div>
+                    <div class="summary-row"><span>Alamat/Catatan:</span> <strong>${alamat}</strong></div>
+                `;
+
+                orderForm.style.display = "none";
+                orderSuccessBox.style.display = "block";
+                orderSuccessBox.scrollIntoView({ behavior: "smooth", block: "center" });
+            });
+
+            btnNewOrder.addEventListener("click", function () {
+                orderForm.reset();
+                orderSuccessBox.style.display = "none";
+                orderForm.style.display = "flex";
+            });
+
+        });
+    </script>
+
+</body>
+</html>
